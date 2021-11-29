@@ -24,14 +24,14 @@ const Language = styled.span({
   fontSize: "14px",
   cursor: "pointer",
 });
-const SearchContainer = styled.div({
-  border: "0.5px solid lightgray",
-  marginLeft: "25px",
-  padding: "5px",
-  display: "flex",
-  alignItems: "center",
-});
-const Input = styled.div({
+const SearchContainer = styled.div`
+  border: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 5px;
+`;
+const Input = styled.input({
   border: "none",
 });
 const Center = styled.div({
@@ -56,11 +56,11 @@ const Navbar = () => {
   return (
     <Container>
       <Wrapper>
-        <Left>
-          <Language>english</Language>
+      <Left>
+          <Language>EN</Language>
           <SearchContainer>
-            <Input />
-            <Search style={{color:'gray', fontSize:'16px'}}/>
+            <Input placeholder="Search" />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
